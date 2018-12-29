@@ -1,6 +1,11 @@
+import React from 'react';
 import Link from 'next/link'
 
-const Header = () => (
+type Props = {
+  readonly a?: string,
+}
+
+const Header = ({ a = "test" }: Props) => (
   <div>
     Header
     <ul>
@@ -8,6 +13,7 @@ const Header = () => (
         <Link href="/">home</Link>  
       </li>
       <li>
+        {a + 3 + "3"}
         <Link href="/stuff">stuff</Link>  
       </li>  
     </ul>
